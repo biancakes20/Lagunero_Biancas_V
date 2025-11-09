@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="grid-container">
+    <div class="navbar">
+      <a href="#" id="logo">MY PORTFOLIO</a>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+       <span id="menu">&#9776;</span>
+        </div>
+        <div id="responsive-nav">
+            <ul id="nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    <div class="image-section">
+      <img src="bianca.jpg" alt="Bianca V. Lagunero">
+    </div>
+    <div class="text-section">
+      <p>
+        Hello! I’m <b>Bianca V. Lagunero</b>, 3rd Year BSINT Student.
+        I am committed to developing my skills in web design, programming, and system development
+        to build innovative and user-friendly digital solutions.
+      </p>
+    </div>
+    <div class="footer"></div>
+  </div>
+  <script>
+        const menu = document.getElementById('menu');
+        const nav = document.getElementById('responsive-nav');
+        menu.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

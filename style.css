@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+        background:linear-gradient(#ef6dc6,#3ce5c9,#b74467)
+    }
+
+.grid-container > div {
+    font-size: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+
+.navbar {
+    background-color: rgb(190, 51, 141);
+    grid-column: 1/11;
+    padding: 15px;
+    position: relative;
+}
+.navbar ul {
+    border-radius: 30px;
+    padding: 5px;
+    float: right;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.navbar li {
+    padding-inline: 10px;
+}
+.navbar a {
+    font-size: 2.1rem;
+    font-family: inria serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: black;
+}
+
+#logo {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(11, 11, 10);
+    padding: 15px 20px;
+    border-radius: 40px;
+    transition: 0.4s ease-in-out;
+    text-decoration: none;
+}
+
+#logo:hover {
+    color: black;
+}
+
+#menu {
+    display: none;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+.image-section {
+    grid-column: 1/5;
+    text-align: center;
+    padding: 3rem 0 2rem 0;
+}
+.image-section img {
+    border-radius: 50%; 
+    width: 250px;    
+    height: 250px;
+    max-width: 250px;
+    transition: .3s ease-in-out;
+    object-fit: cover;
+    padding: 0px;
+}
+.image-section img:hover {
+     transform: rotate(50deg);
+      
+}
+.text-section {
+    grid-column: 5/11;
+    display: grid;
+    place-content: center;
+    text-align: left;
+    padding-right: 2rem;
+    flex-direction:center;
+}
+.text-section ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    font-size: 1.9rem;
+    text-align: right; 
+}
+
+.text-section li:nth-child(1) strong {
+    font-family: inria serif;
+    font-size: 1.9rem;
+    line-height: 80px;
+
+
+    color: black;
+}
+.text-section li:nth-child(2) {
+    font-family: inria serif;
+    font-size: 1.9rem;
+    text-align: start;
+    color: white;
+
+}
+
+.quote-section {
+    grid-column: 5/11;
+    text-align: left;
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+}
+.quote {
+    font-size: 1.9rem;
+    font-family: "Inria Serif", serif;
+    color: black;
+    margin: 0;
+}
+
+.footer {
+    grid-column: 1/11;
+    height: 19vh;
+}
+#responsive-nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    left: 0;
+}
+#responsive-nav.show {
+    display: block;
+}
+
+#responsive-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px;
+}
+#responsive-nav a {
+    text-decoration: none;
+    font-size: 11px;
+    color: black;
+    font-family: 'Inria Serif', serif;
+}
+
+#responsive-nav a:hover {
+    color: rgb(190, 51, 141);
+}
+@media  screen and (max-width: 800px) {
+    body {
+        background-color:#9b4fa5;
+    }
+    .navbar{
+        padding: 0px;
+    }
+    .navbar ul{
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        font-size: 50px;
+        float: right;
+    }
+
+    .navbar a {
+        font-size: 1.9rem;
+    }
+
+    .image-section {
+        grid-column: 1/11;
+    }
+
+    .image-section img {
+        width: 70%;
+    }
+
+    .text-section {
+        grid-column: 1/11;
+        text-align: center;
+    }
+
+    .text-section ul {
+        padding-top: 1.5rem;
+    }
+
+    .text-section li:nth-child(1) {
+        font-size: 2rem;
+    }
+
+    .text-section li:nth-child(2) {
+        font-size: 2rem;
+    }
+
+    .quote {
+        font-size: 1.3rem;
+    }
+    .quote-section {
+        grid-column: 1/11;
+        text-align: center;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        margin-top: 60px;
+    }
+     
+}
+@media  screen and (max-width: 600px) {
+    body{
+        background-color: #9b4fa5(203, 121, 206);
+    }
+    .navbar{
+        padding: 15px;
+    }
+    .navbar ul {
+        display: none;
+         
+    }
+    #menu {
+        display: block;
+        float: right;
+        font-size: 30px;
+    }
+    .navbar a {
+        font-size: 1.8rem;
+    }
+    .image-section {
+        grid-column: 1/11;
+    }
+    .image-section img {
+        width: 100%;
+    }
+    .text-section {
+        grid-column: 1/11;
+        text-align: center;
+    }
+    .text-section li:nth-child(1) {
+        font-size: 1.7rem;
+    }
+    .text-section li:nth-child(2) {
+        font-size: 1.3rem;
+    }
+    .quote {
+        font-size: 1.2rem;
+    }
+    .quote-section {
+        grid-column: 1/11;
+        text-align: center;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        margin-top: 50px;
+    }
+}
+
+@media  screen and (max-width: 400px) {
+    body{
+        background-color: #9b4fa5(201, 124, 182);
+    }
+    .navbar{
+        padding: 15px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+    #menu {
+        display: block;
+        float: right;
+        font-size: 30px;
+        
+    }
+    .navbar a {
+        font-size: 1.7rem;
+    }
+    .image-section {
+        grid-column: 1/11;
+    }
+    .image-section img {
+        width: 100%;
+    }
+    .text-section {
+        grid-column: 1/11;
+        text-align: center;
+        
+    }
+    .text-section li:nth-child(1) {
+        font-size: 1.2rem;
+    }
+    .text-section li:nth-child(2) {
+        font-size: 1.2rem;
+    }
+    .quote {
+        font-size: 1.1rem;
+    }
+    .quote-section {
+        grid-column: 1/11;
+        text-align: center;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        margin-top: 40px;
+    }
+}
+@media  screen and (max-width: 300px) {
+    body{
+        background-color: #9b4fa5(201, 124, 182);
+    }
+    .navbar{
+        padding: 15px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    #logo {
+        font-size: 2rem;
+}
+    #menu {
+        display: block;
+        float: right;
+        font-size: 30px;
+        
+    }
+    .navbar a {
+        font-size: 1.6rem;
+    }
+    .image-section {
+        grid-column: 1/11;
+    }
+    .image-section img {
+        width: 100%;
+    }
+    .text-section {
+        grid-column: 1/11;
+        text-align: center;
+        
+    }
+    .text-section li:nth-child(1) {
+        font-size: 1.2rem;
+    }
+    .text-section li:nth-child(2) {
+        font-size: 1.2rem;
+    }
+    .quote {
+        font-size: 1.1rem;
+    }
+    .quote-section {
+        grid-column: 1/11;
+        text-align: center;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        margin-top: 30px;
+    }
+}
